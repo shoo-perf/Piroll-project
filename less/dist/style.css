@@ -48,9 +48,14 @@
 .navbar-light .navbar-nav .nav-link {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
+  transition: 0.3s;
   font-size: 12px;
   font-weight: 700;
   /**мне это показалось более соответствующим проекту*/
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  outline: 0;
+  color: #39b4af;
 }
 /**Добавляет фон-подложку навигации в мобильной раскладке*/
 div#navbarSupportedContent {
@@ -58,11 +63,6 @@ div#navbarSupportedContent {
 }
 .nav-item {
   margin-left: 30px;
-}
-.navbar-light .navbar-nav .nav-link:hover {
-  outline: 0;
-  color: #39b4af;
-  transition: 0.3s;
 }
 /**Вводная часть*/
 .intro-sect {
@@ -88,8 +88,7 @@ div#navbarSupportedContent {
   background: #39b4af;
   transition: 0.2s;
 }
-/** Ховер придумал сам */
-a.contact-us-button:hover {
+.contact-us-button:hover {
   color: #39b4af;
   background: white;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
