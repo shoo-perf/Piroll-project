@@ -140,10 +140,6 @@ a.contact-us-button:hover {
   display: flex;
   align-items: center;
 }
-.progress-bar-box {
-  padding: 50px;
-  margin-right: 85px;
-}
 .img-box img {
   width: 100%;
 }
@@ -156,14 +152,18 @@ a.contact-us-button:hover {
 .progress-bar {
   background-color: #39b4af;
 }
-.progress-bar-box h2 {
-  padding-bottom: 40px;
+.progress-bar-box {
+  padding: 50px;
+  margin-right: 85px;
 }
 .progress-bar-box p {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 700;
+}
+.progress-bar-box h2 {
+  padding-bottom: 40px;
 }
 .part-progress {
   padding-bottom: 50px;
@@ -186,11 +186,6 @@ a.contact-us-button:hover {
   flex-direction: row;
   align-items: flex-start;
 }
-.text-after-icon {
-  color: white;
-  line-height: 1.9;
-  margin-left: 25px;
-}
 .work-results-content h3 {
   margin: 0;
   font-family: "Montserrat", sans-serif;
@@ -204,6 +199,11 @@ a.contact-us-button:hover {
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 500;
+}
+.text-after-icon {
+  color: white;
+  line-height: 1.9;
+  margin-left: 25px;
 }
 /*Галерея работ*/
 .gallery {
@@ -702,4 +702,3 @@ footer {
     font-size: 9px;
   }
 }
-/*Add com to com*/
