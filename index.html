@@ -1,0 +1,643 @@
+<!--Добил первую страницу макета, возникли проблемы с подвалом при маленьком разрешении экрана, 
+   а также с видео: не смог сделать треугольник play и не смог выставить ширину согласно макета,
+   и даже если получалось выставить ширину видео, то происходило выпадение органов controls
+   В общем, так и не разобрался :(( 
+upd!: Не понял, правильно ли сделал кнопку отправку формы (строка 584) -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="less/dist/style.css" />
+    <title>Home</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img src="img/logo.png" alt="" /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#work">Work</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#process">Process</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="intro-sect">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="intro-image">
+              <!--Убранная картинка-->
+              <img
+                class="intro-img"
+                src="https://loremflickr.com/600/350?lock=300"
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="intro-text">
+              <h1>We Design and Develop</h1>
+              <p>
+                We are a new design studio based in USA. We have over 20 years
+                of combined experience, and know a thing or two about designing
+                websites and mobile apps.
+              </p>
+              <div class="contact-us">
+                <a href="" class="contact-us-button">Contact&nbsp;us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about-us" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="about-us-text">
+              <h2>About Us</h2>
+              <p>
+                Divide have don't man wherein air fourth. Own itself make have
+                night won't make. <br />A you under Seed appear which good give.
+                Own give air without fowl moveth dry first heaven fruit,
+                dominion she'd won't very all.
+              </p>
+              <img src="img/signature.png" alt="signature" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--* Это новый вариант этой верстки, решил сделать через flex, чтобы картинка была на всю высоту/ширину страницы -->
+    <section class="skills-sect">
+      <div class="skills-sect-flex">
+        <div class="progress-bar-box">
+          <h2>Professional Skills</h2>
+          <div class="part-progress">
+            <p>UI/UX design<span class="pre-percent">75%</span></p>
+            <div class="progress">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 75%"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
+          <div class="part-progress">
+            <p>web development<span class="pre-percent">90%</span></p>
+            <div class="progress">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 90%"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
+          <div class="part-progress">
+            <p>marketing<span class="pre-percent">65%</span></p>
+            <div class="progress">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 65%"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div class="img-box">
+          <!-- Картинку зашакалил -->
+          <img src="img/skills-section-img.jpg" loading="lazy" alt="" />
+        </div>
+      </div>
+    </section>
+    <!--!Ниже часть кода от которой я отказался-->
+    <!--<section class="skills-sect">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <section class="skills-sect-left">
+              <h2>Professional Skills</h2>
+              <div class="part-progress">
+                 <p>UI/UX design<span class="pre-percent">75%</span></p>
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 75%"
+                    aria-valuenow="25"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <div class="part-progress">
+                <p>web development<span class="pre-percent">90%</span></p>
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 90%"
+                    aria-valuenow="25"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <div class="part-progress">
+                <p>marketing<span class="pre-percent">65%</span></p>
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 65%"
+                    aria-valuenow="25"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="col-6">
+            <div class="skills-sect-right">
+              <img src="img/skills-section-img.jpg" loading="lazy" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>-->
+    <!--TODO Я так и не понял, как сделать этот блок (который ниже с иконками) правильно, поэтому делал буквально по наитию, буду рад, если ты подскажешь, как оптимизировать мое решение, спасибо! -->
+    <section class="work-results" id="work">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="work-results-content">
+              <img src="img/port.png" alt="" />
+              <section class="text-after-icon">
+                <h3>548</h3>
+                <p>projects completed</p>
+              </section>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="work-results-content">
+              <img src="img/clock.png" alt="" />
+              <section class="text-after-icon">
+                <h3>1465</h3>
+                <p>working hours</p>
+              </section>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="work-results-content">
+              <img src="img/star.png" alt="" />
+              <section class="text-after-icon">
+                <h3>612</h3>
+                <p>POSITIVE FEEDBACKS</p>
+              </section>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="work-results-content">
+              <img src="img/like.png" alt="" />
+              <section class="text-after-icon">
+                <h3>735</h3>
+                <p>HAPPY CLIENTS</p>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="work-gallery">
+      <div class="gallery">
+        <div class="gallery-img">
+          <a href="#"
+            ><img src="img/gallery-imgs/1.jpg" width="594.68px" alt="Пример"
+          /></a>
+        </div>
+        <div class="gallery-img">
+          <a href="#"><img src="img/gallery-imgs/1.jpg" alt="Пример" /></a>
+        </div>
+        <div class="gallery-img">
+          <a href="#"><img src="img/gallery-imgs/1.jpg" alt="Пример" /></a>
+        </div>
+        <div class="gallery-img">
+          <a href="#"><img src="img/gallery-imgs/1.jpg" alt="Пример" /></a>
+        </div>
+        <div class="gallery-img">
+          <a href="#"><img src="img/gallery-imgs/1.jpg" alt="Пример" /></a>
+        </div>
+        <div class="gallery-img">
+          <a href="#"><img src="img/gallery-imgs/1.jpg" alt="Пример" /></a>
+        </div>
+        <div class="gallery-img">
+          <a href="#"><img src="img/gallery-imgs/1.jpg" alt="Пример" /></a>
+        </div>
+        <div class="gallery-img">
+          <a href="#"
+            ><img src="img/gallery-imgs/1.jpg" width="594.68px" alt="Пример"
+          /></a>
+        </div>
+      </div>
+      <details class="load-more-gallery">
+        <summary>
+          <div class="p-in-summary"><p>Load more work</p></div>
+        </summary>
+        <div class="gallery">
+          <div class="gallery-img">
+            <a href="#"
+              ><img src="img/gallery-imgs/1.jpg" width="594.68px" alt="Пример"
+            /></a>
+          </div>
+          <div class="gallery-img">
+            <a href="#"><img src="img/gallery-imgs/1.jpg" alt="Пример" /></a>
+          </div>
+          <div class="gallery-img">
+            <a href="#"><img src="img/gallery-imgs/1.jpg" alt="Пример" /></a>
+          </div>
+          <div class="gallery-img">
+            <a href="#"><img src="img/gallery-imgs/1.jpg" alt="Пример" /></a>
+          </div>
+          <div class="gallery-img">
+            <a href="#"><img src="img/gallery-imgs/1.jpg" alt="Пример" /></a>
+          </div>
+          <div class="gallery-img">
+            <a href="#"><img src="img/gallery-imgs/1.jpg" alt="Пример" /></a>
+          </div>
+          <div class="gallery-img">
+            <a href="#"><img src="img/gallery-imgs/1.jpg" alt="Пример" /></a>
+          </div>
+          <div class="gallery-img">
+            <a href="#"
+              ><img src="img/gallery-imgs/1.jpg" width="594.68px" alt="Пример"
+            /></a>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="work-process" id="process">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="work-process-text">
+              <h3>Our Work Process</h3>
+              <p>
+                Was years it seasons was there form he in in them together over
+                that, third sixth gathered female creeping bearing behold years.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--Никак не получилось выставить видео согласно макета, задавал высоту/ширину по макету, не получалось выствить по центру дива да и с кнопкой play я не разобрался, видимо там все таки нужен js-->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="work-process-video-div">
+              <video class="work-process-video" controls>
+                <source
+                  src="http://learn.shayhowe.com/assets/misc/courses/html-css/adding-media/earth.ogv"
+                />
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="our-spec">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="our-spec-block">
+              <img src="img/our-spec-img/pe-7s-diamond.png" alt="" />
+              <section class="our-spec-block-text">
+                <h3>ui / ux design</h3>
+                <p>Be set fourth land god darkness make it wherein own</p>
+              </section>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="our-spec-block">
+              <img src="img/our-spec-img/pe-7s-arc.png" alt="" />
+              <section class="our-spec-block-text">
+                <h3>web development</h3>
+                <p>A she'd them bring void moving third she'd kind fill</p>
+              </section>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="our-spec-block">
+              <img src="img/our-spec-img/pe-7s-phone.png" alt="" />
+              <section class="our-spec-block-text">
+                <h3>app / mobile</h3>
+                <p>Dominion man second spirit he, earth they're creeping</p>
+              </section>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="our-spec-block">
+              <img src="img/our-spec-img/pe-7s-joy.png" alt="" />
+              <section class="our-spec-block-text">
+                <h3>game design</h3>
+                <p>Morning his saying moveth it multiply appear life be</p>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="our-spec-block">
+              <img src="img/our-spec-img/pe-7s-plane.png" alt="" />
+              <section class="our-spec-block-text">
+                <h3>SEO / marketing</h3>
+                <p>Give won't after land fill creeping meat you, may</p>
+              </section>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="our-spec-block">
+              <img src="img/our-spec-img/pe-7s-star.png" alt="" />
+              <section class="our-spec-block-text">
+                <h3>photography</h3>
+                <p>Creepeth one seas cattle grass give moving saw give</p>
+              </section>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="our-spec-block">
+              <img src="img/our-spec-img/pe-7s-magic-wand.png" alt="" />
+              <section class="our-spec-block-text">
+                <h3>graphic design</h3>
+                <p>Open, great whales air rule for, fourth life whales</p>
+              </section>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="our-spec-block">
+              <img src="img/our-spec-img/pe-7s-paint-bucket.png" alt="" />
+              <section class="our-spec-block-text">
+                <h3>illustrations</h3>
+                <p>Whales likeness hath, man kind for them air two won't</p>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="quote-slider" id="testimonials">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div
+              id="carouselExampleIndicators"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="quote-slider-text-cont">
+                    <p class="quote-slider-text">
+                      "Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Mollitia voluptatibus adipisci molestias laudantium
+                      aspernatur deserunt voluptas nobis obcaecati, vel
+                      veritati”
+                    </p>
+                    <p class="quote-slider-text quote-author">
+                      Lorem ipsum dolor
+                    </p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="quote-slider-text-cont">
+                    <p class="quote-slider-text">
+                      "Outstanding job and exceeded all expectations. It was a
+                      pleasure to work with them on a sizable first project and
+                      am looking forward to start the next one asap.”
+                    </p>
+                    <p class="quote-slider-text quote-author">
+                      Michael Hopkins
+                    </p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="quote-slider-text-cont">
+                    <p class="quote-slider-text">
+                      "Outstanding job and exceeded all expectations. It was a
+                      pleasure to work with them on a sizable first project and
+                      am looking forward to start the next one asap.”
+                    </p>
+                    <p class="quote-slider-text quote-author">
+                      Michael Hopkins
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Предыдущий</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Следующий</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="clients">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="clients-logo">
+              <img src="img/clients-logo/1.png" alt="" />
+              <img src="img/clients-logo/2.png" alt="" />
+              <img src="img/clients-logo/3.png" alt="" />
+              <img src="img/clients-logo/4.png" alt="" />
+              <img src="img/clients-logo/5.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="need-a-project">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="need-a-project-text" id="contact">
+              <h2>Need a Project?</h2>
+              <p>
+                Let us know what you're looking for in an agency. We'll take a
+                look and see if this could be the start of something beautiful.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="need-a-project-form">
+              <form action="#" method="post">
+                <div class="name">
+                  <input type="text" name="login" placeholder="Your Name" />
+                </div>
+                <div class="email">
+                  <input
+                    type="email"
+                    name="password"
+                    placeholder="Your Email"
+                  />
+                </div>
+                <div class="title">
+                  <input type="text" name="title" placeholder="Your Title" />
+                </div>
+                <div class="comment">
+                  <textarea
+                    name="comment"
+                    placeholder="Your Comment"
+                    rows="10"
+                  ></textarea>
+                </div>
+                <button
+                  class="contact-us-button need-a-project-form-btn"
+                  type="submit"
+                  name="submit"
+                  class="submit"
+                  value="Send Data"
+                >
+                  Send&nbsp;message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="footer-content">
+                <div class="footer-copytight">
+                  <h5>Piroll Design, Inc.</h5>
+                  <p>
+                    © 2017 Piroll. All rights reserved. Designed by robirurk.
+                  </p>
+                </div>
+                <div class="footer-contact">
+                  <p>hello@pirolltheme.com</p>
+                  <p>+44 987 065 908</p>
+                </div>
+                <div class="footer-info">
+                  <a class="footer-info-link" href="#work">Projects</a>
+                  <a class="footer-info-link" href="#">About</a>
+                  <a class="footer-info-link" href="#">Services</a>
+                  <a class="footer-info-link" href="#">Carreer</a>
+                  <a class="footer-info-link" href="#">News</a>
+                  <a class="footer-info-link" href="#">Events</a>
+                  <a class="footer-info-link" href="#">Contact</a>
+                  <a class="footer-info-link" href="#">Legals</a>
+                </div>
+                <div class="socials">
+                  <a class="footer-socials-link" href="#">Facebook</a>
+                  <a class="footer-socials-link" href="#">Twitter</a>
+                  <a class="footer-socials-link" href="#">Instagram</a>
+                  <a class="footer-socials-link" href="#">Dribbble</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

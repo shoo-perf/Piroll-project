@@ -1,0 +1,704 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm45xW4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_ZpC7g4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE7g4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/nunitosans/v6/pe03MImSLYBIv1o4X1M8cc8WAf5q.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/nunitosans/v6/pe0qMImSLYBIv1o4X1M8cfe6.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/nunitosans/v6/pe03MImSLYBIv1o4X1M8cc8GBv5q.ttf) format('truetype');
+}
+/*Панель навигации*/
+.navbar {
+  position: absolute;
+  width: 100%;
+}
+.navbar-light .navbar-nav .nav-link {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  /**мне это показалось более соответствующим проекту*/
+}
+/**Добавляет фон-подложку навигации в мобильной раскладке*/
+div#navbarSupportedContent {
+  background: rgba(211, 211, 211, 0.85);
+}
+.nav-item {
+  margin-left: 30px;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  outline: 0;
+  color: #39b4af;
+  transition: 0.3s;
+}
+/**Вводная часть*/
+.intro-sect {
+  background: lightgrey;
+  padding: 240px 0 200px;
+}
+.intro-img {
+  max-width: 100%;
+}
+.intro-text {
+  text-align: left;
+  padding-left: 75px;
+}
+.contact-us-button {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+  padding: 15px 50px 15px 50px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  background: #39b4af;
+  transition: 0.2s;
+}
+/** Ховер придумал сам */
+a.contact-us-button:hover {
+  color: #39b4af;
+  background: white;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+/*Секция "о нас"*/
+.about-us-text {
+  max-width: 620px;
+  margin: 0 auto;
+}
+.about-us-text h2 {
+  padding-top: 103px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+}
+.about-us-text p {
+  text-indent: 14px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+.about-us-text img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 103px;
+}
+/*Секция навыков*/
+.skills-sect {
+  background: #f8f9f9;
+}
+.skills-sect-left {
+  width: 100%;
+  padding: 165px 0 165px;
+  background: #f8f9f9;
+}
+.skills-sect-left h2 {
+  padding-right: 50px;
+}
+/** Вот тут задал отступ */
+.pre-percent {
+  margin-left: 25px;
+}
+.skills-sect-flex {
+  display: flex;
+  align-items: center;
+}
+.progress-bar-box {
+  padding: 50px;
+  margin-right: 85px;
+}
+.img-box img {
+  width: 100%;
+}
+/** Убрал !important. Где-то в гугле видел такое исполнение вот и собезьянничал */
+.progress {
+  height: 3px;
+  width: 500px;
+  background-color: #d8d8d8;
+}
+.progress-bar {
+  background-color: #39b4af;
+}
+.progress-bar-box h2 {
+  padding-bottom: 40px;
+}
+.progress-bar-box p {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+}
+.part-progress {
+  padding-bottom: 50px;
+}
+.skills-sect-right {
+  margin-top: 50px;
+}
+.skills-sect-right img {
+  padding: 0;
+  margin-top: 0;
+  width: 100%;
+}
+/*Секция результатов деятельности*/
+.work-results {
+  background: #39b4af;
+  padding: 101px 0 103px;
+}
+.work-results-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.text-after-icon {
+  color: white;
+  line-height: 1.9;
+  margin-left: 25px;
+}
+.work-results-content h3 {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
+}
+.work-results-content p {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+}
+/*Галерея работ*/
+.gallery {
+  background: #39b4af;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.gallery-img {
+  width: 25%;
+  margin: 0;
+  padding: 0;
+  transition: 0.2;
+}
+.gallery-img img:hover {
+  position: relative;
+  border-left: 1px solid gray;
+  border-bottom: 1px solid gray;
+  transform: scale(1.05, 1.05);
+}
+details {
+  margin: 0;
+  padding: 0;
+  background: #e9e7e7;
+  cursor: pointer;
+  margin: 0 auto;
+}
+summary {
+  display: inline-block;
+  text-align: center;
+  padding-top: auto;
+  height: 100px;
+  display: block;
+  outline: none;
+  user-select: none;
+  cursor: pointer;
+  background: #f5f5f5;
+}
+.p-in-summary {
+  padding-top: 40px;
+}
+.p-in-summary p {
+  color: #9e9e9e;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+}
+.gallery-img img {
+  width: 100%;
+}
+/*Секция процесса работы*/
+.work-process-text {
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 62px;
+  max-width: 50%;
+}
+.work-process-text h3 {
+  margin: 0;
+  padding-bottom: 40px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+}
+.work-process-text p {
+  text-indent: 14px;
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #acacac;
+}
+.work-process-video-div {
+  margin-bottom: 100px;
+}
+.work-process-video {
+  position: relative;
+  max-width: 100%;
+}
+/*Секция специализации компании*/
+.our-spec {
+  background: lightgrey;
+  padding: 103px 0 100px;
+}
+.our-spec-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.our-spec-block img {
+  align-self: center;
+  margin-bottom: 30px;
+}
+.our-spec-block h3 {
+  text-align: center;
+  margin: 0;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.our-spec-block p {
+  text-align: center;
+  text-indent: 14px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #8c8c8c;
+  margin: 0;
+}
+.our-spec .row:first-of-type {
+  padding-bottom: 60px;
+}
+.our-spec .row:last-of-type {
+  padding-bottom: 0;
+}
+/*Слайдер с отзывами работы*/
+.quote-slider {
+  background: #39b4af;
+  padding-top: 185px;
+  padding-bottom: 180px;
+}
+/**Переопределил классы из бутстрапа*/
+.carousel-indicators {
+  position: absolute;
+  right: 0;
+  bottom: -100px;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-right: 15%;
+  margin-bottom: 1rem;
+  margin-left: 15%;
+  list-style: none;
+}
+.carousel-indicators [data-bs-target] {
+  box-sizing: content-box;
+  flex: 0 1 auto;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  padding: 0;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: white;
+  background-clip: padding-box;
+  border: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  transition: opacity 0.6s ease;
+}
+.carousel-indicators .active {
+  transform: scale(1.5);
+}
+.quote-slider-text-cont {
+  margin: 0 auto;
+  max-width: 853px;
+  min-height: 155px;
+}
+.quote-slider-text {
+  text-align: center;
+  margin: 0;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+}
+.quote-author {
+  padding-top: 35px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+/*Блок с логотипами клиентов*/
+.clients {
+  background: #fff;
+  padding: 67px 0 67px;
+}
+.clients-logo {
+  display: flex;
+  justify-content: space-between;
+}
+/*Блок формы need a project*/
+.need-a-project {
+  margin: 0 auto;
+  background: #f5f5f5;
+}
+.need-a-project-text {
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 62px;
+  max-width: 50%;
+}
+.need-a-project-text h2 {
+  margin: 0;
+  padding-bottom: 40px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+}
+.need-a-project-text p {
+  text-indent: 14px;
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #acacac;
+}
+.need-a-project-form {
+  max-width: 50%;
+  margin: 0 auto;
+}
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+input,
+textarea {
+  min-width: 100%;
+  border: none;
+  padding-left: 20px;
+  font-size: 14px;
+  font-family: "Nunito Sans", sans-serif;
+}
+.name,
+.email {
+  min-width: 48%;
+}
+.title,
+.comment {
+  min-width: 100%;
+}
+.name,
+.name input,
+.email,
+.email input,
+.title,
+.title input {
+  min-height: 48px;
+  margin-bottom: 25px;
+}
+.need-a-project-form button {
+  border: none;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+.need-a-project-form button:hover {
+  color: #39b4af;
+  background: white;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+/**Footer*/
+footer {
+  min-width: 100%;
+  background: #141414;
+}
+.footer-content {
+  padding: 50px 0 50px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.footer-content h5 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #f4f4f4;
+}
+.footer-content a,
+.footer-content p {
+  text-decoration: none;
+  font-size: 15px;
+  font-family: "Nunito Sans", sans-serif;
+  color: #bcbcbc;
+}
+.footer-content a:hover {
+  text-decoration: underline;
+}
+.footer-copytight {
+  max-width: 20%;
+}
+.footer-contact {
+  max-height: 100px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.footer-contact p {
+  margin: 0;
+  padding: 0;
+}
+.footer-info {
+  max-height: 100px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.footer-info-link {
+  padding-right: 55px;
+}
+.socials {
+  max-height: 100px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+/*TODOМедиазапросы*/
+@media (max-width: 1280px) {
+  .progress-bar-box {
+    margin: 0;
+  }
+  .progress {
+    width: 300px;
+  }
+}
+@media (max-width: 1200px) {
+  .quote-slider-text-cont {
+    max-width: 720px;
+  }
+}
+@media (max-width: 992px) {
+  .img-box {
+    display: none;
+  }
+  .progress-bar-box {
+    width: 100%;
+  }
+  .progress {
+    width: 100%;
+  }
+  .quote-slider {
+    padding-top: 80px;
+    padding-bottom: 70px;
+  }
+  .carousel-indicators {
+    bottom: -70px;
+  }
+  .quote-slider-text-cont {
+    max-width: 490px;
+  }
+  .quote-slider-text {
+    font-size: 18px;
+  }
+  .quote-author {
+    font-size: 10px;
+  }
+  .need-a-project-text {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    max-width: 50%;
+  }
+  .name,
+  .email {
+    min-width: 100%;
+  }
+  .name,
+  .name input,
+  .email,
+  .email input,
+  .title,
+  .title input {
+    min-height: 40px;
+    margin-bottom: 7px;
+  }
+  .footer-content {
+    padding: 30px 0 30px 0;
+  }
+  .footer-content h5 {
+    font-size: 16px;
+  }
+  .footer-content a,
+  .footer-content p {
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "Nunito Sans", sans-serif;
+    color: #bcbcbc;
+  }
+  .footer-info-link {
+    padding-right: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .intro-sect {
+    padding: 60px;
+  }
+  .intro-img {
+    margin-bottom: 50px;
+  }
+  .intro-text {
+    padding: 0;
+  }
+  .work-results-content {
+    margin-bottom: 40px;
+  }
+  .col-md-3:last-of-type .work-results-content {
+    margin-bottom: 0px;
+  }
+  summary {
+    height: 50px;
+  }
+  .p-in-summary {
+    padding-top: 20px;
+  }
+  .p-in-summary p {
+    font-size: 9px;
+    font-weight: 700;
+  }
+  .work-process-text {
+    margin-top: 35px;
+  }
+  .our-spec {
+    padding: 40px 0 40px;
+  }
+  .our-spec-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .our-spec-block img {
+    margin-bottom: 15px;
+  }
+  .our-spec-block h3 {
+    margin-bottom: 10px;
+  }
+  .our-spec-block p {
+    margin-bottom: 35px;
+  }
+  .our-spec .row:first-of-type {
+    padding-bottom: 0;
+  }
+  .our-spec .row:last-of-type {
+    padding-bottom: 0;
+  }
+  .quote-slider-text-cont {
+    max-width: 350px;
+  }
+  .quote-slider-text {
+    font-size: 16px;
+  }
+  .quote-author {
+    font-size: 12px;
+  }
+  .clients {
+    padding: 30px 0 30px 0;
+  }
+  .clients-logo {
+    max-width: 310px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .clients-logo img {
+    padding-bottom: 30px;
+  }
+  .clients-logo img:last-of-type {
+    padding-bottom: 0;
+  }
+  .footer-copytight {
+    max-width: 37%;
+  }
+  .footer-info {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .gallery-img {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .quote-slider-text-cont {
+    max-width: 300px;
+  }
+}
+@media (max-width: 376px) {
+  .quote-slider-text-cont {
+    max-width: 250px;
+  }
+  .quote-slider-text {
+    font-size: 14px;
+    font-weight: normal;
+  }
+  .quote-author {
+    font-size: 9px;
+  }
+}
