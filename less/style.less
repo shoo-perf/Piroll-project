@@ -2,13 +2,32 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap");
 
-@main-color:#39b4af;
+@main-color: #39b4af;
 
 /*Панель навигации*/
+
 .navbar {
   position: absolute;
   width: 100%;
 }
+
+.navbar.home-navbar{
+   background: white;
+}
+
+
+
+.navbar-scrolled {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: lightgray;
+}
+
+.navbar-scrolled.home-navbar{
+   background: white;
+}
+
 .navbar-light .navbar-nav .nav-link {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
@@ -22,9 +41,14 @@
   }
 }
 /**Добавляет фон-подложку навигации в мобильной раскладке*/
-div#navbarSupportedContent {
+.navbar-collapse {
   background: rgba(211, 211, 211, 0.85);
+  
 }
+.home-navbar.navbar-collapse {
+   background: rgba(255, 255, 255, 0.60);
+   
+ } 
 .nav-item {
   margin-left: 30px;
 }
@@ -33,6 +57,10 @@ div#navbarSupportedContent {
 .intro-sect {
   background: lightgrey;
   padding: 240px 0 200px;
+}
+
+.intro-image {
+  max-width: 100%;
 }
 
 .intro-img {
@@ -63,6 +91,11 @@ div#navbarSupportedContent {
 }
 
 /*Секция "о нас"*/
+
+section.about-us.home-page{
+   background: lightgray;
+}
+
 .about-us-text {
   max-width: 620px;
   margin: 0 auto;
@@ -88,6 +121,26 @@ div#navbarSupportedContent {
     margin-bottom: 103px;
   }
 }
+
+.about-us-text.home-page {
+   h2 {
+   font-size: 38px;
+   margin-top: 115px;
+}
+   p {
+   font-size: 18px;
+   margin-bottom: 101px;
+}
+@media(max-width: 992px){
+   p{
+margin-bottom: 50px;
+   }
+   h2{
+      margin-top: 30px;
+   }
+}
+}
+
 
 /*Секция навыков*/
 .skills-sect {
@@ -196,17 +249,29 @@ div#navbarSupportedContent {
 
 .gallery-img {
   width: 25%;
+  max-height: 317px;
   margin: 0;
   padding: 0;
   transition: 0.2;
   img {
+    width: 100%;
+    min-height: 100%;
     &:hover {
       position: relative;
-      border-left: 1px solid gray;
-      border-bottom: 1px solid gray;
       transform: scale(1.05, 1.05);
     }
   }
+}
+
+/**Классы галереи lightbox*/
+.lb-data .lb-close {
+  display: none;
+}
+.lb-data .lb-number {
+  color: lightgray;
+  font-weight: 700;
+  font-style: italic;
+  font-family: "Montserrat", sans-serif;
 }
 
 details {
@@ -240,10 +305,6 @@ summary {
     font-size: 12px;
     font-weight: 700;
   }
-}
-
-.gallery-img img {
-  width: 100%;
 }
 
 /*Секция процесса работы*/
@@ -694,6 +755,9 @@ footer {
   }
   .clients-logo img:last-of-type {
     padding-bottom: 0;
+  }
+  .need-a-project-form {
+   min-width: 80%;
   }
   .footer-copytight {
     max-width: 37%;

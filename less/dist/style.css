@@ -45,6 +45,18 @@
   position: absolute;
   width: 100%;
 }
+.navbar.home-navbar {
+  background: white;
+}
+.navbar-scrolled {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: lightgray;
+}
+.navbar-scrolled.home-navbar {
+  background: white;
+}
 .navbar-light .navbar-nav .nav-link {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
@@ -58,8 +70,11 @@
   color: #39b4af;
 }
 /**Добавляет фон-подложку навигации в мобильной раскладке*/
-div#navbarSupportedContent {
+.navbar-collapse {
   background: rgba(211, 211, 211, 0.85);
+}
+.home-navbar.navbar-collapse {
+  background: rgba(255, 255, 255, 0.6);
 }
 .nav-item {
   margin-left: 30px;
@@ -68,6 +83,9 @@ div#navbarSupportedContent {
 .intro-sect {
   background: lightgrey;
   padding: 240px 0 200px;
+}
+.intro-image {
+  max-width: 100%;
 }
 .intro-img {
   max-width: 100%;
@@ -94,6 +112,9 @@ div#navbarSupportedContent {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
 }
 /*Секция "о нас"*/
+section.about-us.home-page {
+  background: lightgray;
+}
 .about-us-text {
   max-width: 620px;
   margin: 0 auto;
@@ -118,6 +139,22 @@ div#navbarSupportedContent {
   display: block;
   margin: 0 auto;
   margin-bottom: 103px;
+}
+.about-us-text.home-page h2 {
+  font-size: 38px;
+  margin-top: 115px;
+}
+.about-us-text.home-page p {
+  font-size: 18px;
+  margin-bottom: 101px;
+}
+@media (max-width: 992px) {
+  .about-us-text.home-page p {
+    margin-bottom: 50px;
+  }
+  .about-us-text.home-page h2 {
+    margin-top: 30px;
+  }
 }
 /*Секция навыков*/
 .skills-sect {
@@ -213,15 +250,28 @@ div#navbarSupportedContent {
 }
 .gallery-img {
   width: 25%;
+  max-height: 317px;
   margin: 0;
   padding: 0;
   transition: 0.2;
 }
+.gallery-img img {
+  width: 100%;
+  min-height: 100%;
+}
 .gallery-img img:hover {
   position: relative;
-  border-left: 1px solid gray;
-  border-bottom: 1px solid gray;
   transform: scale(1.05, 1.05);
+}
+/**Классы галереи lightbox*/
+.lb-data .lb-close {
+  display: none;
+}
+.lb-data .lb-number {
+  color: lightgray;
+  font-weight: 700;
+  font-style: italic;
+  font-family: "Montserrat", sans-serif;
 }
 details {
   margin: 0;
@@ -252,9 +302,6 @@ summary {
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 700;
-}
-.gallery-img img {
-  width: 100%;
 }
 /*Секция процесса работы*/
 .work-process-text {
@@ -671,6 +718,9 @@ footer {
   }
   .clients-logo img:last-of-type {
     padding-bottom: 0;
+  }
+  .need-a-project-form {
+    min-width: 80%;
   }
   .footer-copytight {
     max-width: 37%;
