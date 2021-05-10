@@ -11,6 +11,7 @@ body {
 
 .navbar {
   position: absolute;
+  z-index: 5;
   width: 100%;
 }
 .navbar.home-navbar {
@@ -804,7 +805,7 @@ section.need-a-project.about-page {
   padding-top: 0;
 }
 .projects-gallery {
-  padding-top: 56px;
+ padding-top: 27px;
   background-color: lightgray;
   padding-bottom: 0;
   width: 100%;
@@ -816,15 +817,19 @@ section.need-a-project.about-page {
          flex-direction: column-reverse;
       }
       .text-item {
-        align-self: flex-start;
+        align-self: center;
         padding-left: 100px;
         padding-right: 100px;
         min-width: 50%;
         margin: 0;
         @media(max-width: 992px){
+           padding-top: 50px;
          padding-left: 40px;
          padding-right: 60px;
       }
+      @media(max-width: 768px){
+         padding-top: 0px;
+    }
         h2 {
           font-family: "Montserrat", sans-serif;
           font-size: 30px;

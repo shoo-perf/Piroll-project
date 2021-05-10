@@ -46,6 +46,7 @@ body {
 }
 .navbar {
   position: absolute;
+  z-index: 5;
   width: 100%;
 }
 .navbar.home-navbar {
@@ -807,7 +808,7 @@ section.need-a-project.about-page {
   padding-top: 0;
 }
 .projects-gallery {
-  padding-top: 56px;
+  padding-top: 27px;
   background-color: lightgray;
   padding-bottom: 0;
   width: 100%;
@@ -822,7 +823,7 @@ section.need-a-project.about-page {
   }
 }
 .projects-gallery .projects-gallery.slider .item .text-item {
-  align-self: flex-start;
+  align-self: center;
   padding-left: 100px;
   padding-right: 100px;
   min-width: 50%;
@@ -830,8 +831,14 @@ section.need-a-project.about-page {
 }
 @media (max-width: 992px) {
   .projects-gallery .projects-gallery.slider .item .text-item {
+    padding-top: 50px;
     padding-left: 40px;
     padding-right: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .projects-gallery .projects-gallery.slider .item .text-item {
+    padding-top: 0px;
   }
 }
 .projects-gallery .projects-gallery.slider .item .text-item h2 {
