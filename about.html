@@ -1,3 +1,5 @@
+<!--Страница projects.html завязана на ссылку services в навбаре home.html-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,7 +14,7 @@
     />
     <link rel="stylesheet" href="css/lightbox.min.css" />
     <link rel="stylesheet" href="less/dist/style.css" />
-    <title>Home</title>
+    <title>About</title>
   </head>
   <body>
     <section class="navbar-home">
@@ -32,7 +34,10 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse home-navbar" id="navbarSupportedContent">
+          <div
+            class="collapse navbar-collapse home-navbar"
+            id="navbarSupportedContent"
+          >
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link" href="home.html">Home</a>
@@ -42,7 +47,7 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
+                <a class="nav-link" href="contact.html">Contact</a>
               </li>
             </ul>
           </div>
@@ -50,12 +55,12 @@
       </nav>
     </section>
 
-    <section class="about-us home-page">
+    <section class="about-us about-page">
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <div class="about-us-text home-page">
-              <h2>UI/UX & Graphic Designer</h2>
+            <div class="about-us-text about-page">
+              <h2>Amelia Woods</h2>
               <p>
                 I am a Graphic & Web Designer based in New York, specializing in
                 User Interface Design and Development.
@@ -65,82 +70,88 @@
         </div>
       </div>
     </section>
-
-    <!--Lightbox-->
-    <section class="work-gallery">
-      <div class="gallery">
-        <div class="gallery-img">
-          <a href="img/gallery-imgs/1.jpg" data-lightbox="gallery" data-title=""
-            ><img src="img/gallery-imgs/1.jpg" alt=""
-          /></a>
-        </div>
-        <div class="gallery-img">
-          <a href="img/gallery-imgs/2.jpg" data-lightbox="gallery" data-title=""
-            ><img src="img/gallery-imgs/2.jpg" alt=""
-          /></a>
-        </div>
-        <div class="gallery-img">
-          <a href="img/gallery-imgs/3.jpg" data-lightbox="gallery" data-title=""
-            ><img src="img/gallery-imgs/3.jpg" alt=""
-          /></a>
-        </div>
-        <div class="gallery-img">
-          <a href="img/gallery-imgs/4.jpg" data-lightbox="gallery" data-title=""
-            ><img src="img/gallery-imgs/4.jpg" alt=""
-          /></a>
-        </div>
-        <div class="gallery-img">
-          <a href="img/gallery-imgs/5.jpg" data-lightbox="gallery" data-title=""
-            ><img src="img/gallery-imgs/5.jpg" alt=""
-          /></a>
-        </div>
-        <div class="gallery-img">
-          <a href="img/gallery-imgs/6.jpg" data-lightbox="gallery" data-title=""
-            ><img src="img/gallery-imgs/6.jpg" alt=""
-          /></a>
-        </div>
-        <div class="gallery-img">
-          <a href="img/gallery-imgs/7.jpg" data-lightbox="gallery" data-title=""
-            ><img src="img/gallery-imgs/7.jpg" alt=""
-          /></a>
-        </div>
-        <div class="gallery-img">
-          <a href="img/gallery-imgs/8.jpg" data-lightbox="gallery" data-title=""
-            ><img src="img/gallery-imgs/8.jpg" alt=""
-          /></a>
-        </div>
-        <div class="gallery-img">
-          <a href="img/gallery-imgs/9.jpg" data-lightbox="gallery" data-title=""
-            ><img src="img/gallery-imgs/9.jpg" alt=""
-          /></a>
-        </div>
-        <div class="gallery-img">
-          <a
-            href="img/gallery-imgs/10.jpg"
-            data-lightbox="gallery"
-            data-title=""
-            ><img src="img/gallery-imgs/10.jpg" alt=""
-          /></a>
-        </div>
-        <div class="gallery-img">
-          <a
-            href="img/gallery-imgs/11.jpg"
-            data-lightbox="gallery"
-            data-title=""
-            ><img src="img/gallery-imgs/11.jpg" alt=""
-          /></a>
-        </div>
-        <div class="gallery-img">
-          <a
-            href="img/gallery-imgs/12.jpg"
-            data-lightbox="gallery"
-            data-title=""
-            ><img src="img/gallery-imgs/12.jpg" alt=""
-          /></a>
+    <section class="work-results" id="work">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="work-results-content">
+              <img src="img/port.png" alt="" />
+              <section class="text-after-icon">
+                <h3>548</h3>
+                <p>projects completed</p>
+              </section>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="work-results-content">
+              <img src="img/clock.png" alt="" />
+              <section class="text-after-icon">
+                <h3>1465</h3>
+                <p>working hours</p>
+              </section>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="work-results-content">
+              <img src="img/star.png" alt="" />
+              <section class="text-after-icon">
+                <h3>612</h3>
+                <p>POSITIVE FEEDBACKS</p>
+              </section>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="work-results-content">
+              <img src="img/like.png" alt="" />
+              <section class="text-after-icon">
+                <h3>735</h3>
+                <p>HAPPY CLIENTS</p>
+              </section>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-
+    <!--Фото с подписью-->
+    <section class="skills-sect">
+      <div class="skills-sect-flex about-page">
+        <div class="img-box">
+          <!-- Картинку зашакалил -->
+          <img src="img/skills-section-img.jpg" loading="lazy" alt="" />
+        </div>
+        <div class="about-me text">
+          <h2>About me</h2>
+          <p>
+            Given let waters air sea had you'll, may seed abundantly fish. Were,
+            you'll earth forth winged above brought. Own darkness they're him
+            can't fourth sea place have.
+          </p>
+          <p>
+            So the above May stars cattle fruitful face shall. Tree it, winged.
+            Every signs male firmament us. Morning him.
+          </p>
+          <img class="signature" src="img/signature.png" alt="signature" />
+        </div>
+      </div>
+    </section>
+    <section class="need-a-project about-page">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="need-a-project-text about-page">
+              <h2>Need a Project?</h2>
+              <p>
+                Let us know what you're looking for in an agency. We'll take a
+                look and see if this could be the start of something beautiful.
+              </p>
+            </div>
+            <div class="lets-talk">
+              <a class="lets-talk" href="contact.html">Let's talk</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer>
       <div class="footer">
         <div class="container">

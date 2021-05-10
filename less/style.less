@@ -5,27 +5,33 @@
 @main-color: #39b4af;
 
 /*Панель навигации*/
+body {
+  overflow-x: hidden;
+}
 
 .navbar {
   position: absolute;
   width: 100%;
 }
-
-.navbar.home-navbar{
-   background: white;
+.navbar.home-navbar {
+  background: white;
 }
 
-
+//div#navbarSupportedContent {
+//   background: white;
+//   z-index: 2;
+//}
 
 .navbar-scrolled {
   position: fixed;
+  z-index: 3;
   top: 0;
   width: 100%;
   background: lightgray;
 }
 
-.navbar-scrolled.home-navbar{
-   background: white;
+.navbar-scrolled.home-navbar {
+  background: white;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -41,14 +47,16 @@
   }
 }
 /**Добавляет фон-подложку навигации в мобильной раскладке*/
-.navbar-collapse {
-  background: rgba(211, 211, 211, 0.85);
-  
-}
 .home-navbar.navbar-collapse {
-   background: rgba(255, 255, 255, 0.60);
-   
- } 
+  background: white;
+  z-index: 2;
+}
+.navbar-collapse.main-page {
+  background: lightgray;
+}
+
+
+
 .nav-item {
   margin-left: 30px;
 }
@@ -74,7 +82,8 @@
 
 .contact-us-button {
   text-decoration: none;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   font-size: 12px;
   font-weight: 500;
   color: white;
@@ -88,12 +97,35 @@
     background: white;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
   }
+
+  @media (max-width: 768px) {
+    max-width: 55%;
+  }
+  p {
+    align-self: center;
+    margin: 0;
+    padding: 0;
+
+    @media (max-width: 768px) {
+      font-size: 10px;
+    }
+  }
+}
+a.contact-us-button {
+  max-width: 30%;
+  @media (max-width: 992px) {
+    max-width: 50%;
+  }
+  @media (max-width: 768px) {
+    max-width: 35%;
+    margin-top: 25px;
+  }
 }
 
 /*Секция "о нас"*/
 
-section.about-us.home-page{
-   background: lightgray;
+section.about-us.home-page {
+  background: lightgray;
 }
 
 .about-us-text {
@@ -121,26 +153,49 @@ section.about-us.home-page{
     margin-bottom: 103px;
   }
 }
-
+/**Редактирование страницы HOME*/
 .about-us-text.home-page {
-   h2 {
-   font-size: 38px;
-   margin-top: 115px;
-}
-   p {
-   font-size: 18px;
-   margin-bottom: 101px;
-}
-@media(max-width: 992px){
-   p{
-margin-bottom: 50px;
-   }
-   h2{
+  h2 {
+    font-size: 38px;
+    margin-top: 115px;
+  }
+  p {
+    font-size: 18px;
+    margin-bottom: 101px;
+  }
+  @media (max-width: 992px) {
+    p {
+      margin-bottom: 50px;
+    }
+    h2 {
       margin-top: 30px;
-   }
-}
+    }
+  }
 }
 
+/**Редактирование страницы ABOUT*/
+section.about-us.about-page {
+  background-color: #3e3e3e;
+}
+.about-us-text.about-page {
+  color: white;
+  h2 {
+    font-size: 38px;
+    margin-top: 115px;
+  }
+  p {
+    font-size: 18px;
+    margin-bottom: 101px;
+  }
+  @media (max-width: 992px) {
+    p {
+      margin-bottom: 50px;
+    }
+    h2 {
+      margin-top: 30px;
+    }
+  }
+}
 
 /*Секция навыков*/
 .skills-sect {
@@ -165,8 +220,18 @@ margin-bottom: 50px;
   align-items: center;
 }
 
-.img-box img {
-  width: 100%;
+.img-box {
+  min-width: 50%;
+
+  @media (max-width: 992px) {
+    max-width: 70%;
+  }
+  @media (max-width: 576px) {
+    max-width: 100%;
+  }
+  img {
+    max-width: 100%;
+  }
 }
 
 /** Убрал !important. Где-то в гугле видел такое исполнение вот и собезьянничал */
@@ -181,6 +246,7 @@ margin-bottom: 50px;
 }
 
 .progress-bar-box {
+  min-width: 50%;
   padding: 50px;
   margin-right: 85px;
   p {
@@ -204,6 +270,69 @@ margin-bottom: 50px;
     padding: 0;
     margin-top: 0;
     width: 100%;
+  }
+}
+
+/**Раздел ABOUT на страничке ABOUT*/
+.skills-sect-flex.about-page {
+  @media (max-width: 992px) {
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+  .about-me.text {
+    max-width: 45%;
+    padding-left: 100px;
+    padding-right: 60px;
+
+    @media (max-width: 992px) {
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 40px;
+      padding: 0 60px 0;
+      min-width: 70%;
+    }
+    @media (max-width: 576px) {
+      padding: 0 20px 0;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      min-width: 100%;
+    }
+    h2 {
+      font-family: "Montserrat", sans-serif;
+      font-size: 30px;
+      font-weight: 500;
+      margin-bottom: 40px;
+
+      @media (max-width: 992px) {
+        text-align: center;
+      }
+      @media (max-width: 576px) {
+        font-size: 26px;
+        margin-bottom: 20px;
+      }
+    }
+    p {
+      font-family: "Nunito Sans", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      color: #acacac;
+
+      @media (max-width: 992px) {
+        text-align: center;
+      }
+      @media (max-width: 576px) {
+        font-size: 14px;
+      }
+    }
+    p:first-of-type {
+      margin-bottom: 20px;
+    }
+  }
+  .signature {
+    @media (max-width: 576px) {
+      margin-top: 15px;
+      max-width: 70%;
+    }
   }
 }
 
@@ -526,16 +655,284 @@ textarea {
 }
 
 .need-a-project-form button {
+  display: flex;
+  justify-content: center;
   border: none;
   margin: 0 auto;
   margin-top: 30px;
   margin-bottom: 100px;
+  &hover {
+    color: @main-color;
+    background: white;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  }
+  p {
+    align-self: center;
+    margin: auto;
+    padding: 0;
+  }
+  @media (max-width: 576px) {
+    max-width: 55%;
+  }
 }
 
-.need-a-project-form button:hover {
-  color: @main-color;
+/**Раздел Contact.html*/
+.contact-info {
+  background-color: #f5f5f5;
+  .contact-info.form-and-text {
+    padding-top: 149px;
+
+    @media (max-width: 768px) {
+      padding-top: 100px;
+    }
+    @media (max-width: 576px) {
+      margin: 0 40px 0 40px;
+    }
+    @media (max-width: 480px) {
+      margin: 0 25px 0 25px;
+    }
+    @media (max-width: 350px) {
+      margin: 0 10px 0 10px;
+    }
+    .contact-text {
+      margin-right: 153px;
+
+      @media (max-width: 992px) {
+        margin-right: 90px;
+      }
+      @media (max-width: 768px) {
+        margin-right: 0px;
+        margin-bottom: 70px;
+      }
+      h2 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 30px;
+        font-weight: 500;
+        padding-bottom: 40px;
+      }
+      p {
+        font-family: "Nunito Sans", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        color: #787878;
+        strong {
+          color: #171717;
+        }
+      }
+      p:first-of-type {
+        padding-bottom: 40px;
+      }
+    }
+    .need-a-project-form.contact-page {
+      max-width: 100%;
+    }
+  }
+  /**Большая беда с центрированием карты((((( 
+   в итоге сделал на important, поскольку не мог перебить стили*/
+  .mapouter {
+    width: 100% !important;
+    margin-bottom: 100px;
+  }
+  .gmap_canvas {
+    width: 100% !important;
+  }
+  iframe#gmap_canvas {
+    width: 100% !important;
+  }
+}
+
+/**страничкa ABOUT*/
+section.need-a-project.about-page {
   background: white;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.need-a-project-text.about-page {
+  margin-bottom: 40px;
+
+  @media (max-width: 768px) {
+    min-width: 70%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  @media (max-width: 576px) {
+    min-width: 90%;
+  }
+  h2 {
+    @media (max-width: 576px) {
+      font-size: 26px;
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.lets-talk {
+  text-align: center;
+  margin-bottom: 101px;
+
+  @media (max-width: 768px) {
+    min-width: 50%;
+    margin-bottom: 60px;
+  }
+
+  a {
+    margin: auto;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+    padding: 15px 50px 15px 50px;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    background: #39b4af;
+    transition: 0.2s;
+    &:hover {
+      color: @main-color;
+      background: white;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 576px) {
+      font-size: 10px;
+      max-width: 55%;
+    }
+  }
+}
+
+/**Страничка с галереей проектов*/
+.projects-gallery.item.slick-slide.slick-current.slick-active {
+  padding-top: 0;
+}
+.projects-gallery {
+  padding-top: 56px;
+  background-color: lightgray;
+  padding-bottom: 0;
+  width: 100%;
+  .projects-gallery.slider {
+    .item {
+      display: flex;
+      align-items: center;
+      @media(max-width: 768px){
+         flex-direction: column-reverse;
+      }
+      .text-item {
+        align-self: flex-start;
+        padding-left: 100px;
+        padding-right: 100px;
+        min-width: 50%;
+        margin: 0;
+        @media(max-width: 992px){
+         padding-left: 40px;
+         padding-right: 60px;
+      }
+        h2 {
+          font-family: "Montserrat", sans-serif;
+          font-size: 30px;
+          font-weight: 500;
+          padding-bottom: 40px;
+          margin: 0;
+          @media(max-width: 1280px){
+             padding-bottom: 25px;
+          }
+          @media(max-width: 992px){
+            padding-bottom: 20px;
+            font-size: 26px;
+         }
+        }
+        p {
+          font-family: "Nunito Sans", sans-serif;
+          font-weight: 400;
+          font-size: 16px;
+          color: #787878;
+          @media(max-width: 992px){
+            font-size: 14px;
+         }
+          strong {
+            color: #171717;
+          }
+        }
+        p:first-of-type {
+          padding-bottom: 35px;
+          margin: 0;
+          @media(max-width: 1280px){
+            padding-bottom: 30px;
+         }
+         @media(max-width: 992px){
+            padding-bottom: 25px;
+         }
+        }
+        p:nth-of-type(2) {
+          margin-bottom: 60px;
+          @media(max-width: 1280px){
+            margin-bottom: 50px;
+         }
+         @media(max-width: 992px){
+            margin-bottom: 30px;
+         }
+        }
+      }
+      .img-item {
+        min-width: 50%;
+        @media(max-width: 768px){
+         padding-bottom: 50px;
+      }
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.angle-sect {
+  width: 100%;
+  background: white;
+  padding: 46px 0 46px 0;
+  @media(max-width: 600px){
+   display: none;
+}
+}
+
+.angle-cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px 0 100px;
+}
+
+.prev,
+.next {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+  @media(max-width: 992px){
+   font-size: 10px;
+}
+}
+
+.prev {
+  left: 18%;
+}
+.prev::after {
+  content: "previous project";
+  margin-left: 14px;
+}
+.next::before {
+  content: "next project";
+  margin-right: 14px;
+}
+
+.dots{
+   @media(max-width: 768px){
+      display: none;
+   }
 }
 
 /**Footer*/
@@ -597,7 +994,7 @@ footer {
   flex-wrap: wrap;
 }
 
-/*TODOМедиазапросы*/
+/*Медиазапросы*/
 @media (max-width: 1280px) {
   .progress-bar-box {
     margin: 0;
@@ -614,7 +1011,7 @@ footer {
 }
 
 @media (max-width: 992px) {
-  .img-box {
+  .img-box.index-page {
     display: none;
   }
   .progress-bar-box {
@@ -666,7 +1063,7 @@ footer {
   .footer-content a,
   .footer-content p {
     text-decoration: none;
-    font-size: 14px;
+    font-size: 12px;
     font-family: "Nunito Sans", sans-serif;
     color: #bcbcbc;
   }
@@ -678,7 +1075,8 @@ footer {
 
 @media (max-width: 768px) {
   .intro-sect {
-    padding: 60px;
+    padding: 30px;
+    padding-top: 80px;
   }
   .intro-img {
     margin-bottom: 50px;
@@ -708,6 +1106,16 @@ footer {
 
   .work-process-text {
     margin-top: 35px;
+    max-width: 90%;
+  }
+  .work-process-text h3 {
+    font-size: 26px;
+    padding-bottom: 20px;
+  }
+  .work-process-text p {
+    font-size: 14px;
+    padding-bottom: 0px;
+    margin-bottom: 0;
   }
   .our-spec {
     padding: 40px 0 40px;
@@ -756,8 +1164,19 @@ footer {
   .clients-logo img:last-of-type {
     padding-bottom: 0;
   }
+  .need-a-project-text {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    max-width: 100%;
+  }
+  .need-a-project-text h2 {
+    font-size: 26px;
+  }
+  .need-a-project-text p {
+    font-size: 14px;
+  }
   .need-a-project-form {
-   min-width: 80%;
+    min-width: 90%;
   }
   .footer-copytight {
     max-width: 37%;
