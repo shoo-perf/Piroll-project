@@ -1,10 +1,5 @@
 console.log("Kk");
 
-//Решение на jQuery
-//$(".about-us-text").click(function () {
-//  $(this).toggleClass("about-us-text-active");
-//});
-
 //Решение на pure js
 var el = document.querySelector(".about-us-text");
 
